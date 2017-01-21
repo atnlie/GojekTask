@@ -85,19 +85,21 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AFNetworking-iOS8.0/AFNetworking.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/APAddressBook-iOS8.0/APAddressBook.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ISO8601DateFormatterValueTransformer-iOS8.0/ISO8601DateFormatterValueTransformer.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RKValueTransformers-iOS8.0/RKValueTransformers.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RestKit-iOS8.0/RestKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SOCKit-iOS8.0/SOCKit.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON-iOS8.0/SwiftyJSON.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/TTGSnackbar-iOS8.0/TTGSnackbar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TransitionKit-iOS8.0/TransitionKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AFNetworking-iOS8.0/AFNetworking.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/APAddressBook-iOS8.0/APAddressBook.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ISO8601DateFormatterValueTransformer-iOS8.0/ISO8601DateFormatterValueTransformer.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RKValueTransformers-iOS8.0/RKValueTransformers.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RestKit-iOS8.0/RestKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SOCKit-iOS8.0/SOCKit.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON-iOS8.0/SwiftyJSON.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/TTGSnackbar-iOS8.0/TTGSnackbar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TransitionKit-iOS8.0/TransitionKit.framework"
 fi

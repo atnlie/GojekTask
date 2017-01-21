@@ -6,9 +6,6 @@
 //  Copyright © 2017 atnlie. All rights reserved.
 //
 
-//#import <AFNetworking/AFNetworking.h>
-//#import <Restkit/ObjectMapping/ObjectMapping.h>
-
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 

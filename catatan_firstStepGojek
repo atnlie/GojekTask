@@ -1,0 +1,228 @@
+/*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+
+    //        if let dictionary = jsonData as? [String: AnyObject] {
+//            for (key, value) in dictionary {
+//                //var contactList:ContactListModel = ContactListModel()
+//                //contactList.id = value(forKey: "id")
+//                //contactList.first_name = value(forKey: "a")
+//                print("\(key) and \(value)")
+//            }
+//        }
+
+
+http://gojek-contacts-app.herokuapp.com/images/missing.png
+
+//        //controller.contactNameLabel.text = "test"
+//        self.navigationController?.pushViewController(controller, animated: true)
+        
+//        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+//        let resultViewController = storyBoard.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
+//        self.navigationController?.pushViewController(resultViewController, animated: true)
+        
+        
+        //let navigationController = UINavigationController(rootViewController: controller)
+        //self.present(navigationController, animated: true, completion: nil)
+        //navigationController.pushViewController(controller, animated: true)
+
+
+        //self.present(controller, animated: true, completion: nil)
+
+       //AppManager.sharedInstance.navigateToDetailView(viewController: controller, objContactList: cInfo)
+
+
+       //        for (_,jsonDictionary):(String, JSON) in jsonData {
+//            let contactList:ContactList = ContactList()
+//            contactList.id = jsonDictionary["id"].int32!
+//            contactList.first_name = jsonDictionary["first_name"].string!
+//            contactList.last_name = jsonDictionary["last_name"].string!
+//            contactList.url = "-"
+//            contactList.profile_pic = jsonDictionary["profile_pic"].string!
+//            contactList.phone_number = jsonDictionary["phone_number"].string!
+//            contactList.favorite = jsonDictionary["phone_number"].bool!
+//            contactList.created_at = jsonDictionary["created_at"].string!
+//            contactList.updated_at = jsonDictionary["updated_at"].string!
+            
+//        }
+
+
+//        manager.get(AppManager.sharedInstance.baseURL + "contacts.json",
+//                    parameters: nil,
+//                    success: { (operation, responseObject) -> Void in
+//                        if (JSON(responseObject!).count > 0){
+//                            self.contactListJsonParse(jsonData: JSON(responseObject!))
+//                        }else{
+//                            self.appManager.showSnackbar(message: "No contact found")
+//                        }
+//                        self.readContactList()
+//        }, failure: {(Operation, Error)->Void in
+//            self.appManager.showSnackbar(message: "Not able to connect Server")
+//            self.readContactList()
+//        })
+
+
+
+//        manager.get(urlDetail,
+//                    parameters: nil,
+//                    success: { (operation, responseObject) -> Void in
+//                        if (JSON(responseObject!).count > 0){
+//                            self.showDetailInfo(jsonData: JSON(responseObject!))
+//                        }else{
+//                            self.appManager.showSnackbar(message: "No contact found")
+//                        }
+//        }, failure: {(Operation, Error)->Void in
+//            self.appManager.showSnackbar(message:"Not able to connect Server.")
+//        })
+
+
+
+
+//    func contactListJsonParse(jsonData:JSON)->Void{
+//        for (_,jsonDictionary):(String, JSON) in jsonData {
+//            let contactList:ContactListModel = ContactListModel()
+//            contactList.id = jsonDictionary["id"].int!
+//            contactList.first_name = jsonDictionary["first_name"].string!
+//            contactList.last_name = jsonDictionary["last_name"].string!
+//            contactList.url = jsonDictionary["url"].string!
+//            contactList.profile_pic = jsonDictionary["profile_pic"].string!
+//            //default value
+//            contactList.phone_number = "-"
+//            contactList.favorite = false
+//            contactList.created_at = "-"
+//            contactList.updated_at = "-"
+//            self.saveToCoreData(objContact: contactList)
+//        }
+//    }
+
+
+//        manager.get(AppManager.sharedInstance.baseURL + "contacts.json",
+//                    parameters: nil,
+//                    success: { (operation, responseObject) -> Void in
+//                        if (JSON(responseObject!).count > 0){
+//                            self.contactListJsonParse(jsonData: JSON(responseObject!))
+//                        }else{
+//                            self.appManager.showSnackbar(message: "No contact found")
+//                        }
+//                        self.readContactList()
+//        }, failure: {(Operation, Error)->Void in
+//            self.appManager.showSnackbar(message: "Not able to connect Server")
+//            self.readContactList()
+//        })
+
+
+
+//        manager.get(urlDetail,
+//                    parameters: nil,
+//                    success: { (operation, responseObject) -> Void in
+//                        if (JSON(responseObject!).count > 0){
+//                            self.showDetailInfo(jsonData: JSON(responseObject!))
+//                        }else{
+//                            self.appManager.showSnackbar(message: "No contact found")
+//                        }
+//        }, failure: {(Operation, Error)->Void in
+//            self.appManager.showSnackbar(message:"Not able to connect Server.")
+//        })
+
+//self.contactPhoneLabel.text = detailInfo["phone_number"].string!
+        //self.contactEmailLabel.text = detailInfo["email"].string!
+
+        if ((detailInfo["phone_number"].type) != Type.null) {
+            self.contactPhoneLabel.text = detailInfo["phone_number"].string!
+        }else{
+            self.contactPhoneLabel.text = "-"
+        }
+        if (detailInfo["email"].type != Type.null) {
+            self.contactEmailLabel.text = detailInfo["email"].string!
+        }else{
+            self.contactEmailLabel.text = "-"
+        }
+
+
+
+
+
+        (jsonDictionary["id"].type != Type.null)?jsonDictionary["id"].int!:"-"
+
+
+//            contactList.id = jsonDictionary["id"].int!
+            contactList.id = (jsonDictionary["id"].type != Type.null) ? (jsonDictionary["id"].int!) : 0
+            contactList.first_name = jsonDictionary["first_name"].string!
+            contactList.last_name = jsonDictionary["last_name"].string!
+            contactList.url = jsonDictionary["url"].string!
+            contactList.profile_pic = jsonDictionary["profile_pic"].string!
+            //default value
+            contactList.phone_number = "-"
+            contactList.favorite = false
+            contactList.created_at = "-"
+            contactList.updated_at = "-"
+            self.saveToCoreData(objContact: contactList)
+
+
+  //        if ((detailInfo["phone_number"].type) != Type.null) {
+//            self.contactPhoneLabel.text = detailInfo["phone_number"].string!
+//        }else{
+//            self.contactPhoneLabel.text = "-"
+//        }
+//        if (detailInfo["email"].type != Type.null) {
+//            self.contactEmailLabel.text = detailInfo["email"].string!
+//        }else{
+//            self.contactEmailLabel.text = "-"
+//        }
+
+
+
+    
+    
+//    func getContactList(onCompletion: (JSON) -> Void) {
+//        let route = baseURL
+//        self.HTTPGetRequest(route, onCompletion: { json, err in
+//            onCompletion(json as JSON)
+//        })
+//    }
+    
+//    private func HTTPGetRequest(path: String, onCompletion: ServiceResponse) {
+    
+        //let request = NSMutableURLRequest(url: NSURL(string: path)! as URL)
+        
+        //let session = NSURLSession.sharedSession()
+        
+//        let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+//            if let jsonData = data {
+//                let json:JSON = JSON(data: jsonData)
+//                onCompletion(json, error)
+//            } else {
+//                onCompletion(nil, error)
+//            }
+//        })
+//        task.resume()
+//    }
+    
+    
+    
+//    static func fetchContactList(mappingObject mapping:RKObjectMapping, UrlAPI urlApi:String)->Void{
+//        let manager = AFHTTPSessionManager()
+//        manager.get(urlApi,
+//                    parameters: nil,
+//                    progress: { (Progress) in },
+//                    success: { (URLSessionDataTask, nil) in
+//            
+//        }) { (nil, error) in
+//            
+//        }
+//        manager.get(urlApi,
+//                    parameters: nil,
+//                    success: { (operation, responseObject) -> Void in
+//                        print(responseObject!)
+//        }, failure: nil)
+//    }
+
+
+

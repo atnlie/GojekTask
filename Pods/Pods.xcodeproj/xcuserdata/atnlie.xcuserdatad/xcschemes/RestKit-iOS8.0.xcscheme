@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5D9AF4CC3EA6BF2E8732218F8B3139B4"
+               BlueprintIdentifier = "818948490E38AD46686E7D6B6C4B7CFF"
                BuildableName = "RestKit.framework"
                BlueprintName = "RestKit-iOS8.0"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5D9AF4CC3EA6BF2E8732218F8B3139B4"
+            BlueprintIdentifier = "818948490E38AD46686E7D6B6C4B7CFF"
             BuildableName = "RestKit.framework"
             BlueprintName = "RestKit-iOS8.0"
             ReferencedContainer = "container:Pods.xcodeproj">

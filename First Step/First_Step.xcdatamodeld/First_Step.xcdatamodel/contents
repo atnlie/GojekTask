@@ -10,8 +10,9 @@
         <attribute name="phone_number" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="profile_pic" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updated_at" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ContactList" positionX="-63" positionY="-18" width="128" height="180"/>
+        <element name="ContactList" positionX="-63" positionY="-18" width="128" height="195"/>
     </elements>
 </model>

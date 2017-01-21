@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:First Step/Objects/ContactList+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:First Step/Objects/ContactList+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:First Step.xcodeproj">
    </FileRef>
    <FileRef

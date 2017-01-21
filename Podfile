@@ -1,15 +1,20 @@
 # atnlie@gmail.com
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '8.0'
-
+source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
+
 
 def common_pods
   pod 'AFNetworking', '~> 3.1.0'
-  #pod 'ReactiveSwift', '~> 1.0.0'
   pod 'RestKit',  '~> 0.27.0'
-  pod 'APAddressBook/Swift'
-  
+  pod 'SwiftyJSON'
+  pod 'TTGSnackbar'
+
+  #pod 'Alamofire'
+  #pod 'AlamofireCoreData'
+  #pod 'ReactiveSwift', '~> 1.0.0'
+  #pod 'APAddressBook/Swift'
   #pod "JLPermissions/Contacts"
   #pod 'JLPermissions/Notification'
   #pod 'ComponentKit', '~> 0.14'
