@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		5B87AC901E2F0CDB002BF221 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87AC8F1E2F0CDB002BF221 /* AppDelegate.swift */; };
-		5B87AC921E2F0CDB002BF221 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87AC911E2F0CDB002BF221 /* ViewController.swift */; };
 		5B87AC951E2F0CDB002BF221 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B87AC931E2F0CDB002BF221 /* Main.storyboard */; };
 		5B87AC981E2F0CDB002BF221 /* First_Step.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B87AC961E2F0CDB002BF221 /* First_Step.xcdatamodeld */; };
 		5B87AC9A1E2F0CDB002BF221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B87AC991E2F0CDB002BF221 /* Assets.xcassets */; };
 		5B87AC9D1E2F0CDB002BF221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B87AC9B1E2F0CDB002BF221 /* LaunchScreen.storyboard */; };
 		5B87ACA81E2F0CDC002BF221 /* First_StepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87ACA71E2F0CDC002BF221 /* First_StepTests.swift */; };
 		5B87ACB31E2F0CDC002BF221 /* First_StepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87ACB21E2F0CDC002BF221 /* First_StepUITests.swift */; };
+		5BFB82EA1E32CBCF0055581D /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB82E91E32CBCF0055581D /* ContactListViewController.swift */; };
+		5BFB82F21E32D4B70055581D /* ContactListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB82F11E32D4B70055581D /* ContactListModel.swift */; };
+		DA2AC83253EC14F9D76C6E93 /* Pods_First_Step.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB3D24F9014D89269AFAA71 /* Pods_First_Step.framework */; };
+		E2CD4F767755EFD88C1247CD /* Pods_First_StepTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5BA488538B851B50535F37 /* Pods_First_StepTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,21 +37,47 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5B66C4AC1E310AA100A524C8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2AC8873321A360A6333B18E5 /* Pods-First Step.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-First Step.release.xcconfig"; path = "Pods/Target Support Files/Pods-First Step/Pods-First Step.release.xcconfig"; sourceTree = "<group>"; };
+		2C5BE8BB70AC6746846CC447 /* Pods-First Step.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-First Step.debug.xcconfig"; path = "Pods/Target Support Files/Pods-First Step/Pods-First Step.debug.xcconfig"; sourceTree = "<group>"; };
+		5B5BA488538B851B50535F37 /* Pods_First_StepTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_First_StepTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B87AC8C1E2F0CDB002BF221 /* First Step.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "First Step.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B87AC8F1E2F0CDB002BF221 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B87AC911E2F0CDB002BF221 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5B87AC941E2F0CDB002BF221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B87AC971E2F0CDB002BF221 /* First_Step.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = First_Step.xcdatamodel; sourceTree = "<group>"; };
-		5B87AC991E2F0CDB002BF221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B87AC991E2F0CDB002BF221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "First Step/Assets.xcassets"; sourceTree = "<group>"; };
 		5B87AC9C1E2F0CDB002BF221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5B87AC9E1E2F0CDB002BF221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B87AC9E1E2F0CDB002BF221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "First Step/Info.plist"; sourceTree = "<group>"; };
 		5B87ACA31E2F0CDC002BF221 /* First StepTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "First StepTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B87ACA71E2F0CDC002BF221 /* First_StepTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = First_StepTests.swift; sourceTree = "<group>"; };
 		5B87ACA91E2F0CDC002BF221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B87ACAE1E2F0CDC002BF221 /* First StepUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "First StepUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B87ACB21E2F0CDC002BF221 /* First_StepUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = First_StepUITests.swift; sourceTree = "<group>"; };
 		5B87ACB41E2F0CDC002BF221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BDAB3391E30CF03008691D5 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = "Pods/../build/Debug-iphoneos/ReactiveCocoa/ReactiveCocoa.framework"; sourceTree = "<group>"; };
+		5BDAB33A1E30CF03008691D5 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = "Pods/../build/Debug-iphoneos/ReactiveSwift/ReactiveSwift.framework"; sourceTree = "<group>"; };
+		5BDAB33D1E30CF0F008691D5 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = "Pods/../build/Debug-iphoneos/Result/Result.framework"; sourceTree = "<group>"; };
+		5BFB82E91E32CBCF0055581D /* ContactListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactListViewController.swift; path = Classes/Contacts/ContactListViewController.swift; sourceTree = "<group>"; };
+		5BFB82F11E32D4B70055581D /* ContactListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactListModel.swift; path = Contacts/ContactListModel.swift; sourceTree = "<group>"; };
+		5BFB82F31E32D6CC0055581D /* FirstStep-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FirstStep-Bridging-Header.h"; sourceTree = "<group>"; };
+		5BFB82F41E32DB0A0055581D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = "First Step/PrefixHeader.pch"; sourceTree = "<group>"; };
+		B2B0CAB5F1A546D79D5B9833 /* Pods-First StepTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-First StepTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-First StepTests/Pods-First StepTests.release.xcconfig"; sourceTree = "<group>"; };
+		DE5185D54ED5E80ED4CE9E95 /* Pods-First StepTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-First StepTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-First StepTests/Pods-First StepTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3492D3188E7851583C97EC2 /* Pods_First_StepUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_First_StepUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECB3D24F9014D89269AFAA71 /* Pods_First_Step.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_First_Step.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA2AC83253EC14F9D76C6E93 /* Pods_First_Step.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2CD4F767755EFD88C1247CD /* Pods_First_StepTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +110,14 @@
 		5B87AC831E2F0CDB002BF221 = {
 			isa = PBXGroup;
 			children = (
+				5BFB82EC1E32CEA40055581D /* Support Files */,
+				5BFB82EB1E32CE940055581D /* Database */,
 				5B87AC8E1E2F0CDB002BF221 /* First Step */,
 				5B87ACA61E2F0CDC002BF221 /* First StepTests */,
 				5B87ACB11E2F0CDC002BF221 /* First StepUITests */,
 				5B87AC8D1E2F0CDB002BF221 /* Products */,
+				89EEE4D75CC0743B1BB65BB2 /* Pods */,
+				F6E39BACA26117FD813929CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +134,8 @@
 		5B87AC8E1E2F0CDB002BF221 /* First Step */ = {
 			isa = PBXGroup;
 			children = (
-				5B87AC8F1E2F0CDB002BF221 /* AppDelegate.swift */,
-				5B87AC911E2F0CDB002BF221 /* ViewController.swift */,
-				5B87AC931E2F0CDB002BF221 /* Main.storyboard */,
-				5B87AC991E2F0CDB002BF221 /* Assets.xcassets */,
-				5B87AC9B1E2F0CDB002BF221 /* LaunchScreen.storyboard */,
-				5B87AC9E1E2F0CDB002BF221 /* Info.plist */,
-				5B87AC961E2F0CDB002BF221 /* First_Step.xcdatamodeld */,
+				5BFB82EE1E32CEDB0055581D /* Objects */,
+				5BFB82ED1E32CEC10055581D /* Classes */,
 			);
 			path = "First Step";
 			sourceTree = "<group>";
@@ -128,6 +158,68 @@
 			path = "First StepUITests";
 			sourceTree = "<group>";
 		};
+		5BFB82EB1E32CE940055581D /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				5B87AC961E2F0CDB002BF221 /* First_Step.xcdatamodeld */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		5BFB82EC1E32CEA40055581D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B87AC9B1E2F0CDB002BF221 /* LaunchScreen.storyboard */,
+				5B87AC9E1E2F0CDB002BF221 /* Info.plist */,
+				5B87AC991E2F0CDB002BF221 /* Assets.xcassets */,
+				5BFB82F31E32D6CC0055581D /* FirstStep-Bridging-Header.h */,
+				5BFB82F41E32DB0A0055581D /* PrefixHeader.pch */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		5BFB82ED1E32CEC10055581D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5B87AC931E2F0CDB002BF221 /* Main.storyboard */,
+				5B87AC8F1E2F0CDB002BF221 /* AppDelegate.swift */,
+				5BFB82E91E32CBCF0055581D /* ContactListViewController.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		5BFB82EE1E32CEDB0055581D /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				5BFB82F11E32D4B70055581D /* ContactListModel.swift */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		89EEE4D75CC0743B1BB65BB2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C5BE8BB70AC6746846CC447 /* Pods-First Step.debug.xcconfig */,
+				2AC8873321A360A6333B18E5 /* Pods-First Step.release.xcconfig */,
+				DE5185D54ED5E80ED4CE9E95 /* Pods-First StepTests.debug.xcconfig */,
+				B2B0CAB5F1A546D79D5B9833 /* Pods-First StepTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F6E39BACA26117FD813929CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BDAB33D1E30CF0F008691D5 /* Result.framework */,
+				5BDAB3391E30CF03008691D5 /* ReactiveCocoa.framework */,
+				5BDAB33A1E30CF03008691D5 /* ReactiveSwift.framework */,
+				ECB3D24F9014D89269AFAA71 /* Pods_First_Step.framework */,
+				5B5BA488538B851B50535F37 /* Pods_First_StepTests.framework */,
+				E3492D3188E7851583C97EC2 /* Pods_First_StepUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +227,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B87ACB71E2F0CDC002BF221 /* Build configuration list for PBXNativeTarget "First Step" */;
 			buildPhases = (
+				585D01C2365231B940DF6923 /* [CP] Check Pods Manifest.lock */,
 				5B87AC881E2F0CDB002BF221 /* Sources */,
 				5B87AC891E2F0CDB002BF221 /* Frameworks */,
 				5B87AC8A1E2F0CDB002BF221 /* Resources */,
+				1D2035BEECCC186EA0087044 /* [CP] Embed Pods Frameworks */,
+				AAB3408ECC2A133C5B16F64A /* [CP] Copy Pods Resources */,
+				5B66C4AC1E310AA100A524C8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,9 +248,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B87ACBA1E2F0CDC002BF221 /* Build configuration list for PBXNativeTarget "First StepTests" */;
 			buildPhases = (
+				2C678D221E31D966444EFB59 /* [CP] Check Pods Manifest.lock */,
 				5B87AC9F1E2F0CDC002BF221 /* Sources */,
 				5B87ACA01E2F0CDC002BF221 /* Frameworks */,
 				5B87ACA11E2F0CDC002BF221 /* Resources */,
+				A04E625278C1D3B0B575DFF6 /* [CP] Embed Pods Frameworks */,
+				35228C00269004CD028805C1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,15 +295,18 @@
 				TargetAttributes = {
 					5B87AC8B1E2F0CDB002BF221 = {
 						CreatedOnToolsVersion = 8.2;
-						ProvisioningStyle = Automatic;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Manual;
 					};
 					5B87ACA21E2F0CDC002BF221 = {
 						CreatedOnToolsVersion = 8.2;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 5B87AC8B1E2F0CDB002BF221;
 					};
 					5B87ACAD1E2F0CDC002BF221 = {
 						CreatedOnToolsVersion = 8.2;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 5B87AC8B1E2F0CDB002BF221;
 					};
@@ -257,13 +359,107 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D2035BEECCC186EA0087044 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-First Step/Pods-First Step-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C678D221E31D966444EFB59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		35228C00269004CD028805C1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-First StepTests/Pods-First StepTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		585D01C2365231B940DF6923 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A04E625278C1D3B0B575DFF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-First StepTests/Pods-First StepTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAB3408ECC2A133C5B16F64A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-First Step/Pods-First Step-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5B87AC881E2F0CDB002BF221 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B87AC921E2F0CDB002BF221 /* ViewController.swift in Sources */,
+				5BFB82EA1E32CBCF0055581D /* ContactListViewController.swift in Sources */,
 				5B87AC981E2F0CDB002BF221 /* First_Step.xcdatamodeld in Sources */,
+				5BFB82F21E32D4B70055581D /* ContactListModel.swift in Sources */,
 				5B87AC901E2F0CDB002BF221 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +510,7 @@
 				5B87AC9C1E2F0CDB002BF221 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = "First Step";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -412,30 +609,55 @@
 		};
 		5B87ACB81E2F0CDC002BF221 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C5BE8BB70AC6746846CC447 /* Pods-First Step.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ReactiveCocoa",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ReactiveSwift",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Result",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/First Step/PrefixHeader.pch";
 				INFOPLIST_FILE = "First Step/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "gojek.First-Step";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FirstStep-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		5B87ACB91E2F0CDC002BF221 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AC8873321A360A6333B18E5 /* Pods-First Step.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ReactiveCocoa",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ReactiveSwift",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Result",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/First Step/PrefixHeader.pch";
 				INFOPLIST_FILE = "First Step/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "gojek.First-Step";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FirstStep-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		5B87ACBB1E2F0CDC002BF221 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE5185D54ED5E80ED4CE9E95 /* Pods-First StepTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -450,6 +672,7 @@
 		};
 		5B87ACBC1E2F0CDC002BF221 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2B0CAB5F1A546D79D5B9833 /* Pods-First StepTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -507,6 +730,7 @@
 				5B87ACB91E2F0CDC002BF221 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B87ACBA1E2F0CDC002BF221 /* Build configuration list for PBXNativeTarget "First StepTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +739,7 @@
 				5B87ACBC1E2F0CDC002BF221 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B87ACBD1E2F0CDC002BF221 /* Build configuration list for PBXNativeTarget "First StepUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +748,7 @@
 				5B87ACBF1E2F0CDC002BF221 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -533,7 +759,8 @@
 				5B87AC971E2F0CDB002BF221 /* First_Step.xcdatamodel */,
 			);
 			currentVersion = 5B87AC971E2F0CDB002BF221 /* First_Step.xcdatamodel */;
-			path = First_Step.xcdatamodeld;
+			name = First_Step.xcdatamodeld;
+			path = "First Step/First_Step.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

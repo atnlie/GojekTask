@@ -9,5 +9,9 @@
 import UIKit
 
 class ContactListModel: NSObject {
-
+    
+    class func mapping() -> RKObjectMapping {
+        let mapping = RKObjectMapping(for: self)
+        return mapping!
+    }
 }
