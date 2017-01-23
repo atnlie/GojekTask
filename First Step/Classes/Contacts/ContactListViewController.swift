@@ -16,6 +16,8 @@ import TTGSnackbar
 class ContactListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //MARK: Variables
     @IBOutlet weak var contactTableView: UITableView!
+    @IBOutlet weak var addNewContactButtonItem: UIBarButtonItem!
+    @IBOutlet weak var reloadContactListButtonItem: UIBarButtonItem!
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var localContacts = [ContactList]()
     var appManager:AppManager = AppManager()
@@ -27,8 +29,7 @@ class ContactListViewController: UIViewController, UITableViewDelegate, UITableV
         self.title = "Contact List"
         appManager.showSnackbar(message: "Please wait, contacting server...")
         self.clearCoreData()
-        self.fetchContactList()
-        //self.test()
+        self.fetchContactList(urlAPI: appManager.baseURL + "/contacts.json")
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -41,23 +42,10 @@ class ContactListViewController: UIViewController, UITableViewDelegate, UITableV
         // Dispose of any resources that can be recreated.
     }
     
-    func test()->Void{
-        let responseDescriptor:RKResponseDescriptor = RKResponseDescriptor.init(mapping: ContactListModel.mapping(), method: RKRequestMethod.any, pathPattern: nil, keyPath: nil, statusCodes: RKStatusCodeIndexSetForClass(RKStatusCodeClass.successful))
-        let contactUrl:URL = URL(string:AppManager.sharedInstance.baseURL + "contacts.json")!
-        let requestUrl:NSURLRequest = NSURLRequest.init(url: contactUrl)
-        let objRequestOperation:RKObjectRequestOperation = RKObjectRequestOperation.init(request: requestUrl as URLRequest!, responseDescriptors:[responseDescriptor])
-        objRequestOperation.setCompletionBlockWithSuccess({ (operation:RKObjectRequestOperation?, result:RKMappingResult?) in
-            print(RKMappingResult.array(result!))
-            print("Berhasil")
-        }) { (operation:RKObjectRequestOperation?, error:Error?) in
-            print("Gagal \(error)")
-        }
-    }
-    
     //MARK: Connect to API server
-    func fetchContactList()->Void{
+    func fetchContactList(urlAPI:String)->Void{
         let manager = AFHTTPSessionManager()
-        manager.get(AppManager.sharedInstance.baseURL + "contacts.json", parameters: nil,
+        manager.get(urlAPI, parameters: nil,
                     progress: {(NSProgress) in },
                     success: {
                         (operation:URLSessionDataTask, responseObject:Any?) in
@@ -70,10 +58,27 @@ class ContactListViewController: UIViewController, UITableViewDelegate, UITableV
                     }) { (session:URLSessionDataTask?, error:Error) in
                         self.appManager.showSnackbar(message: "Not able to connect Server")
                         self.readContactList()
-        }        
+        }
     }
     
     func contactListJsonParse(jsonData:JSON)->Void{
+        for (_,jsonDictionary):(String, JSON) in jsonData {
+            let contactList:ContactListModel = ContactListModel()
+            contactList.id = (jsonDictionary["id"].type != Type.null) ? (jsonDictionary["id"].int!) : 0
+            contactList.first_name = (jsonDictionary["first_name"].type != Type.null) ? (jsonDictionary["first_name"].string!) : "-"
+            contactList.last_name = (jsonDictionary["last_name"].type != Type.null) ? (jsonDictionary["last_name"].string!) : "-"
+            contactList.url = (jsonDictionary["url"].type != Type.null) ? (jsonDictionary["url"].string!) : "-"
+            contactList.profile_pic = (jsonDictionary["profile_pic"].type != Type.null) ? (jsonDictionary["profile_pic"].string!) : "-"
+            //default value
+            contactList.phone_number = (jsonDictionary["phone_number"].type != Type.null) ? (jsonDictionary["phone_number"].string!) : "-"
+            contactList.favorite = (jsonDictionary["favorite"].type != Type.null) ? (jsonDictionary["favorite"].bool!) : false
+            contactList.created_at = (jsonDictionary["created_at"].type != Type.null) ? (jsonDictionary["created_at"].string!) : "-"
+            contactList.updated_at = (jsonDictionary["updated_at"].type != Type.null) ? (jsonDictionary["updated_at"].string!) : "-"
+            self.saveToCoreData(objContact: contactList)
+        }
+    }
+    
+    func getDetailContactList(jsonData:JSON)->Void{
         for (_,jsonDictionary):(String, JSON) in jsonData {
             let contactList:ContactListModel = ContactListModel()
             contactList.id = (jsonDictionary["id"].type != Type.null) ? (jsonDictionary["id"].int!) : 0
@@ -95,7 +100,6 @@ class ContactListViewController: UIViewController, UITableViewDelegate, UITableV
         let managedContext = appDelegate.managedObjectContext
         let entity = NSEntityDescription.entity(forEntityName: "ContactList", in: managedContext)
         let options = NSManagedObject(entity: entity!, insertInto:managedContext)
-        //options.setValue(name, forKey: "first_name")
         
         if(objContact is ContactListModel){
             let contacList:ContactListModel = objContact as! ContactListModel
@@ -143,9 +147,9 @@ class ContactListViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = self.contactTableView.dequeueReusableCell(withIdentifier:"cell")! as UITableViewCell
         let cInfo:ContactList = self.localContacts[indexPath.row]
-        cell.textLabel?.text = cInfo.first_name! + " " + cInfo.last_name!
         let placeHolderImg = UIImage.init(named: "default_icon")
-        let urlRequest = NSURLRequest.init(url: URL.init(string:AppManager.sharedInstance.baseURL + cInfo.profile_pic!)!)
+        let urlRequest = NSURLRequest.init(url: URL.init(string:appManager.baseURL + "/" + cInfo.profile_pic!)!)
+        cell.textLabel?.text = cInfo.first_name! + " " + cInfo.last_name!
         cell.imageView?.setImageWith(urlRequest as URLRequest!, placeholderImage: placeHolderImg, success: { (request:URLRequest?, response:HTTPURLResponse?, downloadedImage:UIImage?) in
                 cell.imageView?.image = downloadedImage
         }, failure: { (request:URLRequest?, response:HTTPURLResponse?, error:Error?) in
@@ -160,11 +164,24 @@ class ContactListViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Kamu Mencet \(indexPath.row)")
+        print("Kamu Mencet index \(indexPath.row)")
         let cInfo:ContactList = self.localContacts[indexPath.row]
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller:ContactDetailViewController = storyboard.instantiateViewController(withIdentifier: "CONTACTDETAILVC") as! ContactDetailViewController
         controller.contactDetail = cInfo
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @IBAction func reloadContactListButtonItem(_ sender: UIBarButtonItem) {
+        appManager.showSnackbar(message: "Please wait, contacting server...")
+        self.clearCoreData()
+        self.fetchContactList(urlAPI: appManager.baseURL + "/contacts.json")
+        self.contactTableView.reloadData()
+    }
+    
+    @IBAction func addNewContactButtonItem(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller:AddNewContactViewController = storyboard.instantiateViewController(withIdentifier: "ADDNEWCONTACT") as! AddNewContactViewController
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }

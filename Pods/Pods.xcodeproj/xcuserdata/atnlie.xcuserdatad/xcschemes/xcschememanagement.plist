@@ -44,12 +44,32 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ReactiveSwift-iOS10.2.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ReactiveSwift-iOS8.0.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>RestKit-iOS10.2.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>RestKit-iOS8.0.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Result-iOS10.2.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Result-iOS8.0.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -97,17 +117,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>12962A388F7B1424AFA79E49F5768E58</key>
+		<key>037B6A511C8A700481292A546B166153</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3ADE01BE3EB6EFF20E7B980FF3F24C80</key>
+		<key>07375C571E841FE4AAD632A36361F89B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3D5339E9BACDA4EBEA03179ACE6BCD04</key>
+		<key>171C11900F5A68015AD88E62B8970441</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>26A6915CA1912669D27AF382FC0E33EF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>278E53E55410B42E4E02409A78BA695C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2837719A1BAE19690AE410B59E71A1A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,47 +157,52 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>5A0DF484E0864820761052799C73D6DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5D02B7355A21245B1A3A42EFD8107920</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>65377AC6A7F08E6A916C33767D10D5CE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>69608B104B0EDE7D8271B5CF14315842</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6FC258A5B29A0742EA75EC358EC28326</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>712D17640E612F033286D3D309F73C58</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>818948490E38AD46686E7D6B6C4B7CFF</key>
+		<key>8984FEEE6BA60A3D44FB7BC6683490B1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>976FF0F4CD627852119ADB2371972656</key>
+		<key>D4B9D70AA9203B45315D34F7B8BDE8F5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>993EEDFBCEBE82695715873D53FFF670</key>
+		<key>DC0CC0048F5BE65A3A878E92266304D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A53D162644CA0BE00C1FFD3B5B5DE86E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A956339E9A51FA9EB107A63F7C6821B6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BF079C8B1F90E454A59CDEDC60C5D4F0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C89ADC922559CDF307C03C68E722C38F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D8B61D0B4FC7B1BF713595AEB8199892</key>
+		<key>DCCCC097630C975A2D9966052C93C532</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -172,17 +212,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ED69DAD9DA08D0AA160C88FDBD6288FC</key>
+		<key>DE380BB3774ACD76135E5398B716ADC1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E3787870DD503CC5300E35EF0015DB44</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>FD60EC1E7698EEE2A0C550433E9B51D3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FDF9EFE68C444E2C389F0EBB285FDA16</key>
 		<dict>
 			<key>primary</key>
 			<true/>

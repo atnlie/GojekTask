@@ -9,8 +9,11 @@
 import UIKit
 import SwiftyJSON
 import TTGSnackbar
+import MessageUI
 
-class ContactDetailViewController: UIViewController,UIGestureRecognizerDelegate {
+class ContactDetailViewController: UIViewController,UIGestureRecognizerDelegate,
+    MFMailComposeViewControllerDelegate {
+    @IBOutlet weak var favoriteImageView: UIImageView!
     @IBOutlet var contactImageView: UIImageView!
     @IBOutlet var contactNameLabel: UILabel!
     @IBOutlet var contactPhoneLabel: UILabel!
@@ -41,8 +44,23 @@ class ContactDetailViewController: UIViewController,UIGestureRecognizerDelegate 
     }
     
     @objc private func sendEmail(sender:UITapGestureRecognizer)->Void{
-        appManager.sendEmail(receiver: self.contactEmailLabel.text!)
+        //appManager.sendEmail(receiver: self.contactEmailLabel.text!)
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients([self.contactEmailLabel.text!])
+            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
+            present(mail, animated: true)
+        } else {
+            // show failure alert
+            appManager.showSnackbar(message: "Sorry, does not email supports")
+        }
     }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+    
     //MARK: update values
     private func updateInfoDetail()->Void{
         self.contactNameLabel.text = contactDetail.first_name! + " " + contactDetail.last_name!
@@ -52,7 +70,7 @@ class ContactDetailViewController: UIViewController,UIGestureRecognizerDelegate 
     
     private func setContactImage()->Void{
         let placeHolderImg = UIImage.init(named: "default_icon")
-        let urlRequest = NSURLRequest.init(url: URL.init(string:AppManager.sharedInstance.baseURL + contactDetail.profile_pic!)!)
+        let urlRequest = NSURLRequest.init(url: URL.init(string:AppManager.sharedInstance.baseURL + "/" + contactDetail.profile_pic!)!)
         self.contactImageView.setImageWith(urlRequest as URLRequest!, placeholderImage: placeHolderImg, success: { (request:URLRequest?, response:HTTPURLResponse?, downloadedImage:UIImage?) in
             self.contactImageView.image = downloadedImage
         }, failure: { (request:URLRequest?, response:HTTPURLResponse?, error:Error?) in
@@ -117,5 +135,13 @@ class ContactDetailViewController: UIViewController,UIGestureRecognizerDelegate 
         let detailInfo:JSON = jsonData
         self.contactPhoneLabel.text = (detailInfo["phone_number"].type != Type.null) ? (detailInfo["phone_number"].string!) : "-"
         self.contactEmailLabel.text = (detailInfo["email"].type != Type.null) ? (detailInfo["email"].string!) : "-"
+        
+        if (detailInfo["favorite"].type != Type.null){
+            if(detailInfo["favorite"].bool!){
+                self.favoriteImageView.image = UIImage.init(named: "heart_icon")
+            }else{
+                self.favoriteImageView.image = UIImage.init(named: "heart_silver")
+            }
+        }
     }
 }

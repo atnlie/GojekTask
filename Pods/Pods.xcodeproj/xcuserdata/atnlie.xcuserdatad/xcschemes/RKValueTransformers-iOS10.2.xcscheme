@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BF079C8B1F90E454A59CDEDC60C5D4F0"
+               BlueprintIdentifier = "D4B9D70AA9203B45315D34F7B8BDE8F5"
                BuildableName = "RKValueTransformers.framework"
                BlueprintName = "RKValueTransformers-iOS10.2"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BF079C8B1F90E454A59CDEDC60C5D4F0"
+            BlueprintIdentifier = "D4B9D70AA9203B45315D34F7B8BDE8F5"
             BuildableName = "RKValueTransformers.framework"
             BlueprintName = "RKValueTransformers-iOS10.2"
             ReferencedContainer = "container:Pods.xcodeproj">

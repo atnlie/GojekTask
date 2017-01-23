@@ -16,6 +16,7 @@
 		5B87AC9D1E2F0CDB002BF221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B87AC9B1E2F0CDB002BF221 /* LaunchScreen.storyboard */; };
 		5B87ACA81E2F0CDC002BF221 /* First_StepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87ACA71E2F0CDC002BF221 /* First_StepTests.swift */; };
 		5B87ACB31E2F0CDC002BF221 /* First_StepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87ACB21E2F0CDC002BF221 /* First_StepUITests.swift */; };
+		5BEAF97E1E3486F900C6ED77 /* AddNewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEAF97D1E3486F900C6ED77 /* AddNewContactViewController.swift */; };
 		5BFB82EA1E32CBCF0055581D /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB82E91E32CBCF0055581D /* ContactListViewController.swift */; };
 		5BFB82F21E32D4B70055581D /* ContactListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB82F11E32D4B70055581D /* ContactListModel.swift */; };
 		DA2AC83253EC14F9D76C6E93 /* Pods_First_Step.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB3D24F9014D89269AFAA71 /* Pods_First_Step.framework */; };
@@ -74,6 +75,7 @@
 		5BDAB3391E30CF03008691D5 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = "Pods/../build/Debug-iphoneos/ReactiveCocoa/ReactiveCocoa.framework"; sourceTree = "<group>"; };
 		5BDAB33A1E30CF03008691D5 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = "Pods/../build/Debug-iphoneos/ReactiveSwift/ReactiveSwift.framework"; sourceTree = "<group>"; };
 		5BDAB33D1E30CF0F008691D5 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = "Pods/../build/Debug-iphoneos/Result/Result.framework"; sourceTree = "<group>"; };
+		5BEAF97D1E3486F900C6ED77 /* AddNewContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddNewContactViewController.swift; path = Classes/Contacts/AddNewContactViewController.swift; sourceTree = "<group>"; };
 		5BFB82E91E32CBCF0055581D /* ContactListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactListViewController.swift; path = Classes/Contacts/ContactListViewController.swift; sourceTree = "<group>"; };
 		5BFB82F11E32D4B70055581D /* ContactListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactListModel.swift; path = Contacts/ContactListModel.swift; sourceTree = "<group>"; };
 		5BFB82F31E32D6CC0055581D /* FirstStep-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FirstStep-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				5B87AC931E2F0CDB002BF221 /* Main.storyboard */,
 				5BFB82E91E32CBCF0055581D /* ContactListViewController.swift */,
 				5B6E38E41E33776300C556DF /* ContactDetailViewController.swift */,
+				5BEAF97D1E3486F900C6ED77 /* AddNewContactViewController.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				5B6E38DF1E32EE6A00C556DF /* AppManager.swift in Sources */,
 				5BFB82F21E32D4B70055581D /* ContactListModel.swift in Sources */,
 				5B6E38E51E33776300C556DF /* ContactDetailViewController.swift in Sources */,
+				5BEAF97E1E3486F900C6ED77 /* AddNewContactViewController.swift in Sources */,
 				5B87AC901E2F0CDB002BF221 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

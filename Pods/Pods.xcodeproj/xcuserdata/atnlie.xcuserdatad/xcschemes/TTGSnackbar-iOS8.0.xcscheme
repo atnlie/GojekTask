@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "993EEDFBCEBE82695715873D53FFF670"
+               BlueprintIdentifier = "037B6A511C8A700481292A546B166153"
                BuildableName = "TTGSnackbar.framework"
                BlueprintName = "TTGSnackbar-iOS8.0"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "993EEDFBCEBE82695715873D53FFF670"
+            BlueprintIdentifier = "037B6A511C8A700481292A546B166153"
             BuildableName = "TTGSnackbar.framework"
             BlueprintName = "TTGSnackbar-iOS8.0"
             ReferencedContainer = "container:Pods.xcodeproj">

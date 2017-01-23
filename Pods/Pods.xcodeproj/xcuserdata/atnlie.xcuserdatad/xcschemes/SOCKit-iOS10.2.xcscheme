@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D8B61D0B4FC7B1BF713595AEB8199892"
+               BlueprintIdentifier = "6FC258A5B29A0742EA75EC358EC28326"
                BuildableName = "SOCKit.framework"
                BlueprintName = "SOCKit-iOS10.2"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D8B61D0B4FC7B1BF713595AEB8199892"
+            BlueprintIdentifier = "6FC258A5B29A0742EA75EC358EC28326"
             BuildableName = "SOCKit.framework"
             BlueprintName = "SOCKit-iOS10.2"
             ReferencedContainer = "container:Pods.xcodeproj">

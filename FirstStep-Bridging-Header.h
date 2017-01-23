@@ -8,8 +8,6 @@
 
 #import <Restkit/ObjectMapping.h>
 #import <AFNetworking/AFNetworking.h>
-//#import <TTGSnackbar/TTGSnackbar.h>
 
 @import RestKit;
 @import AFNetworking;
-//@import TTGSnackbar;
